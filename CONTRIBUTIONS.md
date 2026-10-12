@@ -104,6 +104,35 @@ Implement merge sort for resource management and enhance sorting functionality. 
 - **09-18-2026** — Update Reservation manager header. ['057327f'](https://github.com/MatthewHtang/Project1/commit/057327f95bacd92190e34c4fd07c499b813f9500)
 - **09-18-2026** — Update ReservationManager implementation.[' 
 c4b20ae'](https://github.com/MatthewHtang/Project1/commit/c4b20aef46b3093d4b0d93242e136b297d7b8761)
+- **10-06-2026** — Implemented the Active Reservations Report to display all current reservations.[' 
+2d5a478
+'](https://github.com/MatthewHtang/Reservation_System/commit/2d5a478ac8792223f92293aebda35d5b53ec3fcc)
+- **10-06-2026** — Implemented the Resource Utilization Report to show how many active reservations each resource has..[' 
+2d5a478
+'](https://github.com/MatthewHtang/Reservation_System/commit/2d5a478ac8792223f92293aebda35d5b53ec3fcc)
+- **10-06-2026** — Implemented the Most Requested Resources Report to identify resources with the highest number of current requests, including active reservations and waiting-list students.[' 
+2d5a478
+'](https://github.com/MatthewHtang/Reservation_System/commit/2d5a478ac8792223f92293aebda35d5b53ec3fcc)
+- **10-06-2026** — Implemented the Waiting List Statistics Report to show how many students are waiting for each resource.[' 
+2d5a478
+'](https://github.com/MatthewHtang/Reservation_System/commit/2d5a478ac8792223f92293aebda35d5b53ec3fcc)
+- **10-06-2026** — Added countByResourceId() in ReservationList.h and ReservationList.cpp to count reservations for a specific resource.[' 
+2d5a478
+'](https://github.com/MatthewHtang/Reservation_System/commit/2d5a478ac8792223f92293aebda35d5b53ec3fcc)
+- **10-06-2026** — Added getResources() in ResourceManager.h and ResourceManager.cpp to access resource information for reporting.[' 
+2d5a478
+'](https://github.com/MatthewHtang/Reservation_System/commit/2d5a478ac8792223f92293aebda35d5b53ec3fcc)
+- **10-06-2026** — Added generateReport() in ReservationManager.cpp to combine all four reports.[' 
+2d5a478
+'](https://github.com/MatthewHtang/Reservation_System/commit/2d5a478ac8792223f92293aebda35d5b53ec3fcc)
+- **10-06-2026** — Updated ReservationManager.h with the reporting function declarations.[' 
+2d5a478
+'](https://github.com/MatthewHtang/Reservation_System/commit/2d5a478ac8792223f92293aebda35d5b53ec3fcc)
+- **10-06-2026** — Updated main.cpp to connect the Generate Report feature to menu option 8.[' 
+2d5a478
+'](https://github.com/MatthewHtang/Reservation_System/commit/2d5a478ac8792223f92293aebda35d5b53ec3fcc)
+
+
 
 
 
