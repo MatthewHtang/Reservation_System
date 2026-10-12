@@ -59,3 +59,17 @@ We implemented linear search for this system and since our list is not sorted, l
 
  Overall, the slowest operations are O(n) because the linked list has to be searched from the
  head one node at a time. The queue and stack operations are O(1).
+
+ * Reporting
+The reporting feature helps the system display active reservations, resource usage, most requested resources, and waiting list statistics.
+
+Active Reservations – O(n): The system goes through the linked list one by one to display all active reservations. Since it checks every reservation, the time complexity is O(n).
+
+Resource Utilization – O(n × m): The system checks reservations for each resource to count how many times it has been reserved. Here, n is the number of reservations and m is the number of resources.
+
+Most Requested Resources – O(n × m): The system counts how many reservations each resource has to find the most popular ones. Checking all reservations for each resource takes O(n × m) time.
+
+Waiting List Statistics – O(w): The system goes through the waiting lists to count how many students are waiting for resources. Here, w is the total number of students waiting.
+
+Overall: The reporting feature uses loops to check reservations, resources, and waiting lists. Its time complexity depends on the number of records being checked.
+ 
