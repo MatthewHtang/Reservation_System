@@ -8,13 +8,21 @@ For the Resource class, I designed a class that stores data about a particular r
 - ResourceManager
 For the ResourceManager class, I have implemented loading resources from a file, storing them, displaying them, and looking them up by ID. I have used a vector to store them, so imagine that I have a collection of these index cards, unordered, just thrown in a pile in the order that I have read from the file. The loadFromFile() method goes through the file once to create a resource for each record, which is O(n). Both the displayAll() and displayAvailable() methods go through the entire vector to display each resource, which is also O(n). The findById(), exists(), and setAvailable() methods have to look at each resource in the vector, starting at the first one, until they find the one they are looking for, since the resources are not ordered or indexed somehow, which is O(n) in the worst case. The getCount() and isEmpty() methods are O(1) since the vector holds a count of the number of resources it contains, so we don't have to iterate over the vector to get that information.
 
+- Sorting (Merge Sort)<br>
+I implemented merge sort for this system to sort the resources by name, A to Z. It is a divide and conquer sort that I wrote myself without using std::sort, and menu option 7 calls it.<br>
+
+    ResourceManager<br>
+    In this resource vector, merge sort cuts the list in half again and again, then merges the
+    pieces back together in order. The best case, average case and worst case are all O(n log n),
+    since it always splits and merges everything, even if the list is already sorted.
+
 # Matthew's Complexity Breakdown
 
 - ReservationList (Linked List) <br>
 In this ReservationList, I have implemented insertion, deletion and rearching algorithm using Linked List. The Big O Notation for this is O(N). Imagine this reservation list as a train. A train has a head and a tail. In our case, we have 'head' and 'nullptr'. Each and every section (node) of the train points their behind. If the boss wanted to add or insert or delete, he has to go from the head, and since the node or a train section only has one pointer, the boss doesn't know where to go, other than follwing each pointer. He check node A, if he can't find it, check where node A is connected with, then node A points to node B, now the boss goes to node B and so on until he reach the tail.
 
 - WaitingList (Queue)<br>
-Queue is used for creating waiting list system. It has three major function: dequeue, enqueue and peek front. I magine you are waiting a line in a reception, the receptionist add new more people at the end, and who ever first line get served first (FIFO). The boss wanted to add a student so he just put him at the back (Enqueue - O(1)). If the boss wanted to start helping student, he just call the first person (Dequeue - 0(1)). For a queue system, we don't need to put student in the middle or take the student from the middle. That's why we have two pointer, front and end. 
+Queue is used for creating waiting list system. It has three major function: dequeue, enqueue and peek front. Imagine you are waiting a line in a reception, the receptionist add new more people at the end, and who ever first line get served first (FIFO). The boss wanted to add a student so he just put him at the back (Enqueue - O(1)). If the boss wanted to start helping student, he just call the first person (Dequeue - 0(1)). For a queue system, we don't need to put student in the middle or take the student from the middle. That's why we have two pointer, front and end. 
 
 - CancellationHistory (Stacked)<br>
 The big O notation for the cancellation history is 0(1). Since it's a stack, we only need one single pointer, which is the top (LIFO). Imagine a student cancel a reservation, the boss put that reservaiton his desk. If the boss needed to hack back that cancellation, he doesn't need to go all the way down, it's alwaying sitting on the top, so he just grab it. First, he slaps it on his desk (push), he grab it off the table (pop). The boss has to access the top one on the stack no matter what. That's why big O notation for this stack is 0(1).
